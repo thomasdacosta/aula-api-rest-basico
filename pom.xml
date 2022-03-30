@@ -13,7 +13,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<name>senac-api-rest-basico</name>
 
-	<description>API Rest para explicar o desenvolvimento básico de Spring Boot e conceitos aprendidos em sala de aula</description>
+	<description>API Rest para explicar o desenvolvimento básico de Spring Boot</description>
 
 	<properties>
 		<java.version>11</java.version>

@@ -1,0 +1,154 @@
+swagger: "2.0"
+info:
+  description: "API Rest para explicar o desenvolvimento básico de Spring Boot"
+  version: "1.0.0"
+  title: "Básico de API Rest"
+  contact:
+    email: "thomasdacostaprof@gmail.com"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "thomasdacosta.com.br"
+basePath: "/v1"
+tags:
+- name: "basico"
+  description: "Principais operações de uma API Rest"
+  externalDocs:
+    description: "Meu site"
+    url: "https://thomasdacosta.com.br/"
+schemes:
+- "http"
+paths:
+  /basico/get/olaMundo:
+    get:
+      tags:
+      - "basico"
+      summary: "Olá Mundo em uma API Rest"
+      description: "Olá Mundo em uma API Rest"
+      operationId: "olaMundo"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "nome"
+        in: "query"
+        description: "Exemplo de um parametro"
+        required: false
+        type: "string"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/OlaMundoResponse"
+        "400":
+          description: "Bad Request"
+  /basico/get/olaMundo/{nome}:
+    get:
+      tags:
+      - "basico"
+      summary: "Olá Mundo em uma API Rest"
+      description: "Olá Mundo em uma API Rest"
+      operationId: "olaMundoPath"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "nome"
+        in: "path"
+        description: "Exemplo de um parametro"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/OlaMundoResponse"
+        "400":
+          description: "Bad Request"          
+  /basico/post/olaMundo:
+    post:
+      tags:
+      - "basico"
+      summary: "Olá Mundo em uma API Rest"
+      description: "Olá Mundo em uma API Rest"
+      operationId: "olaMundoPost"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Nome para exibir na mensagem de Olá Mundo"
+        required: true
+        schema:
+          $ref: "#/definitions/OlaMundoRequest"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/OlaMundoResponse"
+        "400":
+          description: "Bad Request"
+  /basico/put/olaMundo:
+    put:
+      tags:
+      - "basico"
+      summary: "Olá Mundo em uma API Rest"
+      description: "Olá Mundo em uma API Rest"
+      operationId: "olaMundoPut"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Nome para exibir na mensagem de Olá Mundo"
+        required: true
+        schema:
+          $ref: "#/definitions/OlaMundoRequest"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/OlaMundoResponse"
+        "400":
+          description: "Bad Request"                    
+  /basico/delete/olaMundo:
+    delete:
+      tags:
+      - "basico"
+      summary: "Olá Mundo em uma API Rest"
+      description: "Olá Mundo em uma API Rest"
+      operationId: "olaMundoDelete"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "Nome para exibir na mensagem de Olá Mundo"
+        required: true
+        schema:
+          $ref: "#/definitions/OlaMundoRequest"
+      responses:
+        "200":
+          description: "OK"
+          schema:
+            $ref: "#/definitions/OlaMundoResponse"
+        "400":
+          description: "Bad Request"                              
+definitions:
+  OlaMundoRequest:
+    type: "object"
+    properties:
+      nome:
+        type: "string"
+  OlaMundoResponse:
+    type: "object"
+    properties:
+      mensagem:
+        type: "string"
+externalDocs:
+  description: "Conheça o meu site com conteúdo de tecnologia"
+  url: "https://thomasdacosta.com.br/"
