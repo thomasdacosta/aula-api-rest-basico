@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "22533087-9a86-43cc-a86c-177f49a0b171",
+		"name": "Senac - API Rest Básico",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST - Salvar Aluno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"curso\": {\r\n        \"id_curso\": 3\r\n    },\r\n    \"nome\": \"João Ferreira\",\r\n    \"cpf\": \"25495395670\",\r\n    \"rg\": \"11111111\",\r\n    \"data_nascimento\": \"1965-05-20 00:00:00\",\r\n    \"endereco\": \"Av. Eng. Eusébio Stevaux, 823\",\r\n    \"cep\": \"04696000\",\r\n    \"cidade\": \"São Paulo\",\r\n    \"estado\": \"SP\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/v1/senac/aluno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"senac",
+						"aluno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT - Atualizar Aluno",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_aluno\": 22,\r\n    \"curso\": {\r\n        \"id_curso\": 3\r\n    },\r\n    \"nome\": \"João Ferreira\",\r\n    \"cpf\": \"25495395670\",\r\n    \"rg\": \"11111111\",\r\n    \"data_nascimento\": \"1965-05-20 00:00:00\",\r\n    \"endereco\": \"Rua Salvador Branco de Andrade, 182\",\r\n    \"cep\": \"06760100\",\r\n    \"cidade\": \"Taboão da Serra\",\r\n    \"estado\": \"SP\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/v1/senac/aluno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"senac",
+						"aluno"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE - Excluir Aluno",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8082/v1/senac/aluno/24",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"senac",
+						"aluno",
+						"24"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET - Buscar Aluno",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8082/v1/senac/aluno?nome=ferreira",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8082",
+					"path": [
+						"v1",
+						"senac",
+						"aluno"
+					],
+					"query": [
+						{
+							"key": "nome",
+							"value": "ferreira"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -18,11 +18,13 @@ public class AlunoService {
     private AlunoRepository alunoRepository;
 
     public AlunoResponse criarOuAtualizarAluno(AlunoRequest alunoRequest) {
+        // TODO verificar se o aluno existe na atualização
         Aluno novoAluno = AlunoConverter.toAluno(alunoRequest);
         return AlunoConverter.toAlunoResponse(alunoRepository.save(novoAluno));
     }
 
     public List<AlunoResponse> buscarAluno(String nome) {
+        // TODO verificar se trouxe aluno
         return alunoRepository.findAlunoByNomeContainingIgnoreCase(nome)
                 .stream().map(c -> {
                     return AlunoConverter.toAlunoResponse(alunoRepository.save(c));
@@ -30,6 +32,7 @@ public class AlunoService {
     }
 
     public Integer excluirAluno(Integer idAluno) {
+        // TODO verificar se tem trouxe aluno
         alunoRepository.deleteById(idAluno);
         return idAluno;
     }
