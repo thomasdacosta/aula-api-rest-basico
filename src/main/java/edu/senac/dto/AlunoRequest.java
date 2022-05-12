@@ -10,39 +10,48 @@ import edu.senac.utils.DataSerializer;
 
 import java.time.Instant;
 
-@JsonPropertyOrder({"nome", "cpf", "rg", "data_nascimento", "endereco", "cep", "cidade", "estado", "curso"})
+@JsonPropertyOrder({"idAluno", "nome", "cpf", "rg", "data_nascimento", "endereco", "cep", "cidade", "estado", "curso"})
 public class AlunoRequest {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("id_aluno")
     private Integer idAluno;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("curso")
     private CursoRequest curso;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("nome")
     private String nome;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("cpf")
     private String cpf;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("rg")
     private String rg;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("data_nascimento")
     @JsonDeserialize(using = DataDeserializer.class)
     @JsonSerialize(using = DataSerializer.class)
     private Instant dataNascimento;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("endereco")
     private String endereco;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("cep")
     private String cep;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("cidade")
     private String cidade;
 
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     @JsonProperty("estado")
     private String estado;
 
