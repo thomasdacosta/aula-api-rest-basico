@@ -25,16 +25,16 @@ public class AlunoController {
 
     @PostMapping(value = "/aluno", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<AlunoResponse> criarAluno(@RequestBody AlunoRequest alunoRequest) {
-        return ResponseEntity.ok(alunoService.criarOuAtualizarAluno(alunoRequest));
+        return ResponseEntity.ok(alunoService.criarAluno(alunoRequest));
     }
 
     @PutMapping(value = "/aluno", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<AlunoResponse> salvarAluno(@RequestBody AlunoRequest alunoRequest) {
-        return ResponseEntity.ok(alunoService.criarOuAtualizarAluno(alunoRequest));
+    public ResponseEntity<AlunoResponse> atualizarAluno(@RequestBody AlunoRequest alunoRequest) {
+        return ResponseEntity.ok(alunoService.atualizarAluno(alunoRequest));
     }
 
-    @DeleteMapping(value = "/aluno/{id_aluno}")
-    public ResponseEntity<Integer> excluirAluno(@PathVariable(value = "id_aluno") Integer idAluno) {
+    @DeleteMapping(value = "/aluno/{id_aluno}", produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<AlunoResponse> excluirAluno(@PathVariable(value = "id_aluno") Integer idAluno) {
         return ResponseEntity.ok(alunoService.excluirAluno(idAluno));
     }
 

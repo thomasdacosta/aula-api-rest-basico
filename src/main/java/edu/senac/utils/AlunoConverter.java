@@ -11,7 +11,7 @@ public class AlunoConverter {
     public static AlunoResponse toAlunoResponse(Aluno aluno) {
         AlunoResponse alunoResponse = new AlunoResponse();
 
-        alunoResponse.setId(aluno.getId());
+        alunoResponse.setIdAluno(aluno.getId());
         alunoResponse.setNome(aluno.getNome());
         alunoResponse.setCpf(aluno.getCpf());
         alunoResponse.setRg(aluno.getRg());
