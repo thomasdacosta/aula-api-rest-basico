@@ -2,7 +2,9 @@ package edu.senac.exception;
 
 public class AlunoException extends RuntimeException {
 
-    public AlunoException() {
+	private static final long serialVersionUID = -7737840351898585883L;
+
+	public AlunoException() {
     }
 
     public AlunoException(String message) {

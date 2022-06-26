@@ -2,7 +2,9 @@ package edu.senac.exception;
 
 public class OperationException extends RuntimeException {
 
-    public OperationException() {
+	private static final long serialVersionUID = 2205389391001048664L;
+
+	public OperationException() {
     }
 
     public OperationException(String message) {

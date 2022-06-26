@@ -2,7 +2,9 @@ package edu.senac.exception;
 
 public class MethodNotImplementedException extends RuntimeException {
 
-    public MethodNotImplementedException() {
+	private static final long serialVersionUID = -5843647475294941207L;
+
+	public MethodNotImplementedException() {
     }
 
     public MethodNotImplementedException(String message) {
