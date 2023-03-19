@@ -27,17 +27,20 @@ public class AlunoController {
     private AlunoService alunoService;
 
     @GetMapping(value = "/aluno", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<AlunoResponse>> buscarAluno(@RequestParam(value = "nome") String nome) {
+    public ResponseEntity<List<AlunoResponse>> buscarAluno(
+    		@RequestParam(value = "nome") String nome) {
         return ResponseEntity.ok(alunoService.buscarAluno(nome));
     }
 
     @PostMapping(value = "/aluno", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<AlunoResponse> criarAluno(@RequestBody AlunoRequest alunoRequest) {
+    public ResponseEntity<AlunoResponse> criarAluno(
+    		@RequestBody AlunoRequest alunoRequest) {
         return ResponseEntity.ok(alunoService.criarAluno(alunoRequest));
     }
 
     @PutMapping(value = "/aluno", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<AlunoResponse> atualizarAluno(@RequestBody AlunoRequest alunoRequest) {
+    public ResponseEntity<AlunoResponse> atualizarAluno(
+    		@RequestBody AlunoRequest alunoRequest) {
         return ResponseEntity.ok(alunoService.atualizarAluno(alunoRequest));
     }
 
