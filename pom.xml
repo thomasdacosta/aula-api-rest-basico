@@ -18,7 +18,7 @@
 	<properties>
 		<java.version>11</java.version>
 		<maven.compiler.target>11</maven.compiler.target>
-		<maven.compiler.source>11</maven.compiler.source>		
+		<maven.compiler.source>11</maven.compiler.source>
 	</properties>
 
 	<dependencies>
@@ -53,7 +53,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>bff-marvel-api</finalName>
+		<finalName>senac-api-rest-basico</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>

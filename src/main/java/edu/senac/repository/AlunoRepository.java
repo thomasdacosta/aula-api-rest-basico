@@ -9,6 +9,11 @@ import java.util.List;
 @Repository
 public interface AlunoRepository extends CrudRepository<Aluno, Integer> {
 
+    /**
+     * SELECT * FROM ALUNO WHERE UPPER(NOME) LIKE UPPER('%nome%')
+     * @param nome
+     * @return
+     */
     List<Aluno> findAlunoByNomeContainingIgnoreCase(String nome);
 
 }
