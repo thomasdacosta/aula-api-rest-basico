@@ -1,4 +1,4 @@
-# Senac - Básico de API Rest
+# Básico de API Rest
 
 API Rest para explicar o desenvolvimento básico de Spring Boot e conceitos aprendidos em sala de aula
 
